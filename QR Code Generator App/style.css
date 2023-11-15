@@ -1,0 +1,128 @@
+/* Project Name: QR Code Generator App 
+Youtube: https://youtube.com/@devRasen
+Copyright: ©MdRasen */
+
+/* Google font */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+/* General CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Custom CSS */
+.container {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #25251f;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container .qr-contents {
+  display: flex;
+  justify-content: space-around;
+  gap: 30px;
+  align-items: center;
+}
+
+.qr-contents .content {
+  width: 320px;
+  height: 220px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 20px;
+  border: 2px solid #4e515c;
+  border-radius: 5px;
+}
+
+.qr-contents .qr-input {
+  background-color: #4e515c;
+}
+
+.qr-input .title {
+  font-size: 14px;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.qr-input .title::before {
+  content: "";
+  height: 2px;
+  width: 50px;
+  background: #8ebbff;
+  position: absolute;
+  left: 0;
+  top: 100%;
+}
+
+.qr-input .title::after {
+  content: "";
+  height: 2px;
+  width: 25px;
+  background: #8ebbff;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  margin-top: 5px;
+}
+
+.qr-input .qr-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.qr-form input {
+  width: 100%;
+  color: #fff;
+  background-color: transparent;
+  padding: 5px;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid #fff;
+}
+
+.btn {
+  text-decoration: none;
+  background-color: #3f82e7;
+  color: #000;
+  font-size: 14px;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  padding: 4px 8px;
+  margin: 15px auto 0;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+.btn:hover {
+  background-color: #478bf0;
+}
+
+.qr-contents .qr-output.hidden {
+  display: none;
+}
+
+/* Responsive design */
+@media (max-width: 700px) {
+  .container .qr-contents {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .qr-contents .content {
+    width: 300px;
+    height: 200px;
+  }
+}

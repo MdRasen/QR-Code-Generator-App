@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- Project Name: QR Code Generator App 
+  Youtube: https://youtube.com/@devRasen
+  Copyright: ©MdRasen -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>QR Code Generator App | devRasen</title>
+    <!-- FontAwesome CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="qr-contents">
+        <!-- QR input -->
+        <div class="content qr-input">
+          <h3 class="title">
+            <span><i class="fa-solid fa-qrcode"></i></span> QR CODE GENERATOR
+          </h3>
+          <!-- QR form -->
+          <form action="#" class="qr-form">
+            <input
+              type="text"
+              id="input-text"
+              placeholder="Type here..."
+              required
+            />
+            <button type="submit" class="btn" onclick="qrGenerate()">
+              Generate <i class="fa-solid fa-rotate"></i>
+            </button>
+          </form>
+        </div>
+        <!-- QR output -->
+        <div class="content qr-output hidden" id="qr-output">
+          <img
+            src="https://api.qrserver.com/v1/create-qr-code/?size=140x140&data=Example"
+            id="qr-image"
+            alt="qr-image"
+          />
+          <a href="" class="btn" id="btn-download" target="_blank" download
+            >Download <i class="fa-solid fa-download"></i
+          ></a>
+        </div>
+      </div>
+    </div>
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+  </body>
+</html>
